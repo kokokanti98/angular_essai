@@ -17,7 +17,7 @@
 <div class="my-2">
   <div class="row">
     <div class="col-md-4">
-      <span>Filtre actuel: </span>
+      <span class="filter">Filtre actuel: </span>
       <!--ICI la balise b met en gras-->
       <b>{{hotelFilter}}</b>
     </div>
@@ -36,12 +36,23 @@
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col" *ngFor="let hotel of hotels">
       <div class="card">
-        <img [src]="hotel.imageUrl" [title]="hotel.hotelName" class="card-img-top" alt="Card image cap">
+        <img
+             [src]="hotel.imageUrl"
+             [title]="hotel.hotelName | uppercase"
+             [alt]="hotel.hotelName"
+             class="card-img-top">
         <div class="card-body">
-          <h5 class="card-title">{{hotel.hotelName}}</h5>
-          <p class="card-text">{{hotel.description}}</p>
+          <h5 class="card-title">
+            {{hotel.hotelName}}
+          </h5>
+          <p class="card-text">
+            {{hotel.description}}
+          </p>
+          <p class="card-text">
+            {{hotel.price | currency: "EUR":"symbol":"1.2-2" : 'fr'}}
+          </p>
           <!--Afficher la balise span si variable showBadge = True donc vu que boolean de base est False alors au rafraichissement
-            de la page ca affichera pas mais on peut y acceder par la suite à l'aide du button qui va changer la valeur du booleen par son contraire-->
+  de la page ca affichera pas mais on peut y acceder par la suite à l'aide du button qui va changer la valeur du booleen par son contraire-->
           <span class="badge badge-pill badge-info" *ngIf="showBadge">Nouveau</span>
         </div>
       </div>

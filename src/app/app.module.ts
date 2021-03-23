@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { FormsModule } from '@angular/forms'
+import { registerLocaleData } from '@angular/common'
+import localeFr from '@angular/common/locales/fr'
+
+registerLocaleData(localeFr, 'fr');
 
 @NgModule({
   declarations: [
