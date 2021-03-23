@@ -1,2 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* sur cmd: npm install bootstrap --save */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+/* sur cmd: npm install material-icons --save */
+@import '~material-icons/iconfont/material-icons.css';

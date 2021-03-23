@@ -1,8 +1,15 @@
 <!--ICI le *ngIf = "CONDITION" va afficher la balise h1 que si la condition est respecter-->
 <h5 *ngIf="hotels && hotels.length > 0">{{title}}</h5>
 
+
 <button class="btn btn-primary" (click)="toggleIsNewBadge()">
-  Afficher nouveau
+  <!--ICI si showBadge est True on va afficher => "un material-icon appele visibility_off" sinon " un material-icon appele visibility"-->
+  <!--Pour voir plus d'icons RDV sur le site: https://material.io/resources/icons/?style=baseline -->
+  <span class="material-icons">
+    {{ showBadge ? "visibility_off" : "visibility" }}
+  </span>
+  <!--ICI si showBadge est True on va afficher => "Cacher nouveau" sinon "Afficher nouveau"-->
+  <span class="ml-2"> {{ showBadge ? "Cacher" : "Afficher" }} nouveau </span>
 </button>
 
 <div class="card-deck">
