@@ -21,3 +21,7 @@
 ##### Changement de la classe HotelListComponent qui implemente une interface OnInit et ajout de la methode ngOnInit()
 ##### Ajout des methode necessaire pour faire le filtre des hotels par nom sur le input un genre de recherche
 
+
+### Les Pipes Personnalisé
+##### A
+
