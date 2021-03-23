@@ -6,5 +6,5 @@
 
 # Part2
 
-##### Creation d'un formulaire
+##### Creation d'un formulaire en angular
 
