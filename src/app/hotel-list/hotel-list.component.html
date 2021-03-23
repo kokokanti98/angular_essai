@@ -1,0 +1,14 @@
+<!--ICI le *ngIf = "CONDITION" va afficher la balise h1 que si la condition est respecter-->
+<h1 *ngIf="hotels && hotels.length > 0">{{title}}</h1>
+
+<div class="card-deck">
+  <!--ICI le *ngFor = "let var dans vars" va faire une boucle de la balise html par rapport au nombre de variable de la vars-->
+  <div class="card" *ngFor="let hotel of hotels">
+    <img class="card-img-top" src="{{hotel.imageUrl}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{hotel.hotelName}}</h5>
+      <p class="card-text">{{hotel.description}}</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
