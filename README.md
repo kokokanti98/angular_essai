@@ -19,4 +19,5 @@
 ##### Importer le fichier hotel.ts dans le hotel-list.component.ts pour l'utiliser dont l'array list d'objet le any devient IHotel
 ##### Ajout de la classe Hotel qui implémente l'interface IHotel
 ##### Changement de la classe HotelListComponent qui implemente une interface OnInit et ajout de la methode ngOnInit()
+##### Ajout des methode necessaire pour faire le filtre des hotels par nom sur le input un genre de recherche
 
