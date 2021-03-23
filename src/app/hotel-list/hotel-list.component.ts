@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { log } from 'console';
+//import { log } from 'console';
 import { IHotel } from './hotel';
 
 @Component({
@@ -90,7 +90,7 @@ export class HotelListComponent implements OnInit{
     }
   ];
   //Le variable boolean par défaut il est FALSE
-  public showBadge: boolean;
+  public showBadge: boolean = false;
 
   //Une event qui retourne rien ou void
   public toggleIsNewBadge(): void {
