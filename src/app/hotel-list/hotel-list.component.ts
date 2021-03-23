@@ -51,6 +51,8 @@ export class HotelListComponent {
   ];
   //Le variable boolean par défaut il est FALSE
   public showBadge: boolean;
+  //Le variable hotelFilter
+  public hotelFilter = "mot";
   //Une event qui retourne rien ou void
   public toggleIsNewBadge(): void {
     //ICI il va nous retourner le contraire si c'est TRUE va nous retourner FALSE et vice versa

@@ -11,23 +11,41 @@
   <!--ICI si showBadge est True on va afficher => "Cacher nouveau" sinon "Afficher nouveau"-->
   <span class="ml-2"> {{ showBadge ? "Cacher" : "Afficher" }} nouveau </span>
 </button>
-
-<div class="card-deck">
-  <!--ICI le *ngFor = "let var dans vars" va faire une boucle de la balise html par rapport au nombre de variable de la vars-->
-  <!--Pour binder les variables: [src]="hotel.imageUrl" ou src="{hotel.imageUrl} avec double crochet"-->
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col" *ngFor="let hotel of hotels">
-    <div class="card">
-      <img [src]="hotel.imageUrl" [title]="hotel.hotelName" class="card-img-top" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{hotel.hotelName}}</h5>
-        <p class="card-text">{{hotel.description}}</p>
-        <!--Afficher la balise span si variable showBadge = True donc vu que boolean de base est False alors au rafraichissement
-          de la page ca affichera pas mais on peut y acceder par la suite à l'aide du button qui va changer la valeur du booleen par son contraire-->
-        <span class="badge badge-pill badge-info" *ngIf="showBadge">Nouveau</span>
-      </div>
+<!--Afficher un genre de ligne séparateur-->
+<hr>
+<!--Début du formulaire-->
+<div class="my-2">
+  <div class="row">
+    <div class="col-md-4">
+      <span>Filtre actuel: </span>
+      <!--ICI la balise b met en gras-->
+      <b>{{hotelFilter}}</b>
+    </div>
+    <div class="col-md-8 form-group">
+      <!--Two ways DATABINDING/ ICI on peut changer la valeur de la variable hotelFilter grâce au input et ngModelChange-->
+      <input type="text" class="form-control" [ngModel]="hotelFilter" (ngModelChange)="hotelFilter = $event " />
     </div>
   </div>
 </div>
+<!--Fin du formulaire-->
+<!--Afficher un genre de ligne séparateur-->
+<hr>
+<div class="card-deck">
+  <!--ICI le *ngFor = "let var dans vars" va faire une boucle de la balise html par rapport au nombre de variable de la vars-->
+  <!--Pour binder les variables: [src]="hotel.imageUrl" ou src="{hotel.imageUrl} avec double crochet"-->
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let hotel of hotels">
+      <div class="card">
+        <img [src]="hotel.imageUrl" [title]="hotel.hotelName" class="card-img-top" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{hotel.hotelName}}</h5>
+          <p class="card-text">{{hotel.description}}</p>
+          <!--Afficher la balise span si variable showBadge = True donc vu que boolean de base est False alors au rafraichissement
+            de la page ca affichera pas mais on peut y acceder par la suite à l'aide du button qui va changer la valeur du booleen par son contraire-->
+          <span class="badge badge-pill badge-info" *ngIf="showBadge">Nouveau</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
