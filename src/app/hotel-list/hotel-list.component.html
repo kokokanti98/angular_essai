@@ -34,7 +34,7 @@
   <!--ICI le *ngFor = "let var dans vars" va faire une boucle de la balise html par rapport au nombre de variable de la vars-->
   <!--Pour binder les variables: [src]="hotel.imageUrl" ou src="{hotel.imageUrl} avec double crochet"-->
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col" *ngFor="let hotel of hotels">
+    <div class="col" *ngFor="let hotel of filteredHotels">
       <div class="card">
         <img
              [src]="hotel.imageUrl"
