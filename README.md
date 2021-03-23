@@ -25,5 +25,9 @@
 ### Les Pipes Personnalisé
 ##### Mise en place des dossiers parent shared et pipe
 ##### Création de la classe ReplaceComma apres avoir importer le Pipe via 'import {Pipe, PipeTransform} from '@angular/core''
-##### Ajout du Pipe dans la variable price après avoir le déclaré dans 
+##### Ajout du Pipe dans la variable price par son nom  après avoir le déclaré dans app.module.ts(déclarations)
+##### Redemarrer le serveur angular
+
+### Les composants enfants(https://www.youtube.com/watch?v=eVTHfPS-V4E&list=PLrbLGOB571zeR7FUQifKmjUpT4ImldCPt&index=22)
+##### Mise en place des dossiers parent shared et pipe
 

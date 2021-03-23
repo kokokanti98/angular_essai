@@ -49,7 +49,7 @@
             {{hotel.description}}
           </p>
           <p class="card-text">
-            {{hotel.price | currency: "EUR":"symbol":"1.2-2" : 'fr'}}
+            {{hotel.price | currency: "EUR":"symbol":"1.2-2" : 'fr' | replaceComma}}
           </p>
           <!--Afficher la balise span si variable showBadge = True donc vu que boolean de base est False alors au rafraichissement
   de la page ca affichera pas mais on peut y acceder par la suite à l'aide du button qui va changer la valeur du booleen par son contraire-->

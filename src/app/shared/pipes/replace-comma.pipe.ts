@@ -1,16 +1,19 @@
-import {Pipe, PipeTransform} from '@angular/core'
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'replaceComma'
 })
+
 export class ReplaceComma implements PipeTransform {
 
-  transform(value: string): string{
+  transform(value: string): string {
     if (!!value) {
-      return value.replace(/,/g, '.');
-    }
-    else {
-      return '';
+      //remplacer les virgules par un point
+      return value.replace(/,/g, ".");
+    } else {
+      //aucune transformation
+      return "";
     }
   }
+
 }

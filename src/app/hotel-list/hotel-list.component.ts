@@ -98,3 +98,5 @@ export class HotelListComponent implements OnInit{
     this.showBadge = !this.showBadge; 
   }
 }
+
+//Partie 20: PIPE Personalise : https://www.youtube.com/watch?v=PoO2l4cviIo&list=PLrbLGOB571zeR7FUQifKmjUpT4ImldCPt&index=21
