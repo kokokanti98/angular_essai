@@ -1,14 +1,26 @@
 <!--ICI le *ngIf = "CONDITION" va afficher la balise h1 que si la condition est respecter-->
-<h1 *ngIf="hotels && hotels.length > 0">{{title}}</h1>
+<h5 *ngIf="hotels && hotels.length > 0">{{title}}</h5>
+
+<button class="btn btn-primary" (click)="toggleIsNewBadge()">
+  Afficher nouveau
+</button>
 
 <div class="card-deck">
   <!--ICI le *ngFor = "let var dans vars" va faire une boucle de la balise html par rapport au nombre de variable de la vars-->
-  <div class="card" *ngFor="let hotel of hotels">
-    <img class="card-img-top" src="{{hotel.imageUrl}}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{hotel.hotelName}}</h5>
-      <p class="card-text">{{hotel.description}}</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  <!--Pour binder les variables: [src]="hotel.imageUrl" ou src="{hotel.imageUrl} avec double crochet"-->
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col" *ngFor="let hotel of hotels">
+    <div class="card">
+      <img [src]="hotel.imageUrl" [title]="hotel.hotelName" class="card-img-top" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{hotel.hotelName}}</h5>
+        <p class="card-text">{{hotel.description}}</p>
+        <!--Afficher la balise span si variable showBadge = True donc vu que boolean de base est False alors au rafraichissement
+          de la page ca affichera pas mais on peut y acceder par la suite à l'aide du button qui va changer la valeur du booleen par son contraire-->
+        <span class="badge badge-pill badge-info" *ngIf="showBadge">Nouveau</span>
+      </div>
     </div>
   </div>
 </div>
+
+

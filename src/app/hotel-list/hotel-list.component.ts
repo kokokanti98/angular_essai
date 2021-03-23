@@ -49,4 +49,11 @@ export class HotelListComponent {
       "rating": 2.5
     }
   ];
+  //Le variable boolean par défaut il est FALSE
+  public showBadge: boolean;
+  //Une event qui retourne rien ou void
+  public toggleIsNewBadge(): void {
+    //ICI il va nous retourner le contraire si c'est TRUE va nous retourner FALSE et vice versa
+    this.showBadge = !this.showBadge; 
+  }
 }
